@@ -1,0 +1,137 @@
+html,body{
+
+    /* background-image:url(assets/images/one.jpg); */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar{
+    background-image: linear-gradient(rgb(100, 100, 100),rgb(33, 33, 33));
+    padding: 7px;
+    align-items:center;
+    display: flex;
+ 
+}
+
+.logo{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.nav-contents{
+    display: flex;
+    margin-left: 750px;
+    
+}
+
+.content{
+    margin: 20px;
+}
+
+a{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+/* card */
+
+
+  /* footer  */
+
+  footer {
+    background-color: #4d4d4d; /* Light gray background */
+    padding: 40px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    bottom: 0;
+    /* position: fixed;
+    width: 100%; */
+    font-family: sans-serif;
+    padding: 10px;
+    color: #333; /* Dark gray text */
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1 1 250px; /* Adjust width as needed */
+    margin-bottom: 20px;
+  }
+
+  .footer-section p{
+    color:white;
+    font-size: 13px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 15px;
+    font-weight: bolder;
+    color: white;
+    font-weight: 18px;
+  }
+  
+  footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer-section li {
+    margin-bottom: 8px;
+  }
+  
+  footer-section a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ddd; /* Light divider */
+    padding-top: 20px;
+    font-size: 0.9em;
+  }
+
+  .footer-bottom p{
+    color: white;
+  }
+  
+  .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.5em; /* Adjust icon size */
+      color: #555; /* Icon color */
+  }
+  
+  .social-icons a:hover {
+      color: #007bff; /* Example hover color */
+  }
+  
+  /* Example Social Icons (You'll need to use actual icon fonts or images) */
+  .social-icons i {
+      /* Replace with your actual icon classes or images */
+  }
+
+  .slide{
+    width: 93.5%;
+    border-radius: 30px;
+  }
+
+  img{
+    border-radius: 30px;
+  } 
+
+  iframe{
+    height: 100%;
+    width: 100%;
+  }
