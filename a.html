@@ -4,241 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
 
-        .nav-bar {
-            background-image: linear-gradient(rgb(100, 100, 100), rgb(33, 33, 33));
-            padding: 7px;
-            align-items: center;
-            display: flex;
-        }
-
-        .logo {
-            width: 100px;
-            margin-left: 50px;
-        }
-
-        .nav-contents {
-            display: flex;
-            margin-left: auto; /* Push to the right */
-        }
-
-        .content {
-            margin: 10px;
-        }
-
-        a {
-            text-decoration: none !important;
-            color: white !important;
-        }
-
-        .google-card {
-            width: 90%; /* Mobile width */
-            max-width: 300px; /* Max width for larger screens */
-            height: auto; /* Adjust height based on content */
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-            font-family: 'Roboto', sans-serif;
-            margin: 20px auto; /* Center cards */
-        }
-
-        .card-header {
-            padding: 26px;
-            margin-left: 10px;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin: 0 0 8px;
-            color: #202124;
-        }
-
-        .card-subtitle {
-            font-size: 0.875rem;
-            color: #5f6368;
-            margin: 0;
-        }
-
-        .card-content {
-            padding: 16px;
-            border-top: 1px solid #dadce0;
-        }
-
-        .card-actions {
-            padding: 8px 16px;
-            border-top: 1px solid #dadce0;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .card-button {
-            background: none;
-            border: none;
-            color: #1a73e8;
-            padding: 8px 16px;
-            margin-left: 8px;
-            cursor: pointer;
-            font-weight: 500;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .card-button:hover {
-            background-color: rgba(26, 115, 232, 0.1);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .main-card {
-            display: flex;
-            flex-wrap: wrap; /* Allow cards to wrap */
-            justify-content: center;
-        }
-
-        footer {
-            background-color: #4d4d4d;
-            padding: 40px 20px;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            font-family: sans-serif;
-            color: #333;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .footer-section {
-            flex: 1 1 250px;
-            margin-bottom: 20px;
-        }
-
-        .footer-section p {
-            color: white;
-            font-size: 13px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 15px;
-            font-weight: bolder;
-            color: white;
-            font-weight: 18px;
-        }
-
-        footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        footer-section li {
-            margin-bottom: 8px;
-        }
-
-        footer-section a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        footer-section a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 30px;
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
-            font-size: 0.9em;
-        }
-
-        .footer-bottom p {
-            color: white;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1.5em;
-            color: #555;
-        }
-
-        .social-icons a:hover {
-            color: #007bff;
-        }
-
-        .slide {
-            width: 93.5%;
-            border-radius: 30px;
-        }
-
-        img {
-            border-radius: 30px;
-        }
-
-        iframe {
-            height: 100%;
-            width: 100%;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) { /* Tablets and smaller */
-            .nav-contents {
-                flex-direction: column;
-                align-items: center;
-                margin-left: 0;
-            }
-
-            .content {
-                margin: 10px 0;
-            }
-
-            .logo {
-                margin-left: 10px;
-            }
-        }
-
-        @media (max-width: 576px) { /* Small screens (phones) */
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-section {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
+    
 </head>
 <body>
     <div class="nav-bar">
-        <div class="nav-logo">
-            <img src="assets/images/logo.png" class="logo" alt="Logo">
-        </div>
-        <div class="nav-contents">
-            <div class="content"><a href="#">Home</a></div>
-            <div class="content"><a href="contact.html">Contact us</a></div>
-            <div class="content"><a href="about.html">About us</a></div>
-            <div class="content"><a href="products.">Products</a></div>
-            <div class="content"><a href="signin.html">Sign in</a></div>
-        </div>
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" class="logo" alt="" srcset="">
+            </div>
+
+            <div class="nav-contents">
+                <div class="content"><a href="#">Home</a></div>
+                <div class="content"><a href="contact.html">Contact us </a></div>
+                <div class="content"><a href="about.html">About us</a></div>
+                <div class="content"><a href="products.">Products</a></div>
+                <div class="content"><a href="signin.html">Sign in    </a></div>
+            </div>
     </div>
+
+
+
+
 <!-- corousel -->
 
 <center>
