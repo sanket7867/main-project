@@ -10,70 +10,87 @@
         html, body {
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
         }
 
         .nav-bar {
             background-image: linear-gradient(rgb(100, 100, 100), rgb(33, 33, 33));
-            padding: 7px;
-            align-items: center;
+            padding: 10px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
             width: 100px;
-            margin-left: 50px;
+            margin-left: 10px;
+        }
+
+        .nav-toggle {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
         }
 
         .nav-contents {
-            display: flex;
-            margin-left: auto; /* Push to the right */
+            position: fixed;
+            top: 0;
+            right: -300px; /* Initially hidden */
+            width: 300px;
+            height: 100%;
+            background-color: rgb(33, 33, 33);
+            padding-top: 60px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-contents.show {
+            right: 0; /* Show the nav */
         }
 
         .content {
-            margin: 10px;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #4d4d4d;
         }
 
         a {
             text-decoration: none !important;
             color: white !important;
+            display: block;
         }
 
         .google-card {
-            width: 90%; /* Mobile width */
-            max-width: 300px; /* Max width for larger screens */
-            height: auto; /* Adjust height based on content */
-            border-radius: 30px;
+            width: 90%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
             overflow: hidden;
-            font-family: 'Roboto', sans-serif;
-            margin: 20px auto; /* Center cards */
+            margin: 20px auto;
         }
 
         .card-header {
-            padding: 26px;
-            margin-left: 10px;
+            padding: 15px;
         }
 
         .card-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin: 0 0 8px;
-            color: #202124;
+            font-size: 1.1rem;
+            margin: 0 0 5px;
         }
 
         .card-subtitle {
-            font-size: 0.875rem;
-            color: #5f6368;
-            margin: 0;
+            font-size: 0.8rem;
         }
 
         .card-content {
-            padding: 16px;
+            padding: 10px;
             border-top: 1px solid #dadce0;
         }
 
         .card-actions {
-            padding: 8px 16px;
+            padding: 10px;
             border-top: 1px solid #dadce0;
             display: flex;
             justify-content: flex-end;
@@ -83,16 +100,10 @@
             background: none;
             border: none;
             color: #1a73e8;
-            padding: 8px 16px;
-            margin-left: 8px;
+            padding: 5px 10px;
+            margin-left: 5px;
             cursor: pointer;
-            font-weight: 500;
             border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .card-button:hover {
-            background-color: rgba(26, 115, 232, 0.1);
         }
 
         .card-image {
@@ -103,17 +114,16 @@
 
         .main-card {
             display: flex;
-            flex-wrap: wrap; /* Allow cards to wrap */
+            flex-wrap: wrap;
             justify-content: center;
         }
 
         footer {
             background-color: #4d4d4d;
-            padding: 40px 20px;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            font-family: sans-serif;
-            color: #333;
+            padding: 30px 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            color: #fff;
         }
 
         .footer-container {
@@ -125,20 +135,13 @@
         }
 
         .footer-section {
-            flex: 1 1 250px;
+            flex: 1 1 200px;
             margin-bottom: 20px;
         }
 
-        .footer-section p {
-            color: white;
-            font-size: 13px;
-        }
-
         .footer-section h3 {
-            margin-bottom: 15px;
-            font-weight: bolder;
-            color: white;
-            font-weight: 18px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
         footer-section ul {
@@ -147,81 +150,58 @@
         }
 
         footer-section li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         footer-section a {
+            color: #fff;
             text-decoration: none;
-            color: #333;
-        }
-
-        footer-section a:hover {
-            text-decoration: underline;
         }
 
         .footer-bottom {
             text-align: center;
-            margin-top: 30px;
-            border-top: 1px solid #ddd;
-            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #666;
+            padding-top: 15px;
             font-size: 0.9em;
-        }
-
-        .footer-bottom p {
-            color: white;
         }
 
         .social-icons a {
             display: inline-block;
             margin-right: 10px;
-            font-size: 1.5em;
-            color: #555;
-        }
-
-        .social-icons a:hover {
-            color: #007bff;
+            font-size: 1.3em;
+            color: #fff;
         }
 
         .slide {
-            width: 93.5%;
-            border-radius: 30px;
+            width: 95%;
+            border-radius: 15px;
+            margin: 10px auto;
         }
 
         img {
-            border-radius: 30px;
-        }
-
-        iframe {
-            height: 100%;
-            width: 100%;
+            border-radius: 15px;
         }
 
         /* Media Queries */
-        @media (max-width: 768px) { /* Tablets and smaller */
+        @media (min-width: 768px) {
+            .nav-toggle {
+                display: none; /* Hide toggle on larger screens */
+            }
+
             .nav-contents {
-                flex-direction: column;
-                align-items: center;
-                margin-left: 0;
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                display: flex;
+                margin-left: auto;
+                padding-top: 0;
             }
 
             .content {
-                margin: 10px 0;
-            }
-
-            .logo {
-                margin-left: 10px;
-            }
-        }
-
-        @media (max-width: 576px) { /* Small screens (phones) */
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-section {
-                width: 100%;
-                text-align: center;
+                border-bottom: none;
+                padding: 10px;
             }
         }
     </style>
@@ -231,6 +211,9 @@
         <div class="nav-logo">
             <img src="assets/images/logo.png" class="logo" alt="Logo">
         </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="nav-contents">
             <div class="content"><a href="#">Home</a></div>
             <div class="content"><a href="contact.html">Contact us</a></div>
@@ -239,26 +222,24 @@
             <div class="content"><a href="signin.html">Sign in</a></div>
         </div>
     </div>
-<!-- corousel -->
 
-<center>
-  <div class="slide" style="margin-top: 15px;">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="assets/images/banner1.gif" class="d-block w-100" alt="...">
+    <center>
+        <div class="slide">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/banner1.gif" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/banner2.gif" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/banner3.gif" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item ">
-          <img src="assets/images/banner2.gif" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item ">
-          <img src="assets/images/banner3.gif" class="d-block w-100" alt="...">
-        </div>
-      </div>
-    </div>
-  </div>
-</center>
-
+    </center>
 <script>
   // Initialize the carousel
   var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
