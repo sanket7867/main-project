@@ -40,11 +40,11 @@
 }
 
 .card-image {
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
-/* Footer Styles */
+
 footer {
     background-color: #4d4d4d;
     padding: 40px 20px;
@@ -90,4 +90,120 @@ footer {
     border-top: 1px solid #ddd;
     padding-top: 20px;
     font-size: 0.9em;
+}
+
+
+@media (max-width: 768px) {
+
+    .nav-toggle {
+        display: none; 
+    }
+    .about-us h1 {
+        font-size: 2rem;
+    }
+
+    .about-us p, .about-us ul {
+        font-size: 1rem;
+    }
+
+    .about-us h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-us .col-4 {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us {
+        padding: 30px 15px;
+    }
+
+    .about-us h1 {
+        font-size: 1.8rem;
+    }
+
+    .card-image {
+        height: 300px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav-bar {
+    background-image: linear-gradient(rgb(100, 100, 100), rgb(33, 33, 33));
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav-toggle {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: block; 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .nav-contents {
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none; 
+    }
+
+    .logo{
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .nav-contents {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        margin-left: auto;
+        padding-top: 0;
+    }
+
+    .content {
+        border-bottom: none;
+        padding: 10px;
+    }
 }
